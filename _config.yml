@@ -1,0 +1,27 @@
+title: Nicogs
+description: "Thoughts, experiments and perspectives on creativity, technology and digital culture."
+url: "https://YOUR-USERNAME.github.io"
+baseurl: ""
+lang: en
+author:
+  name: Nicolas Grootjans
+  url: "https://YOUR-USERNAME.github.io"
+
+markdown: kramdown
+permalink: /:categories/:title/
+timezone: Europe/Brussels
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+header_pages:
+  - about.md
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

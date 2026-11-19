@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<section class="intro">
+  <p class="eyebrow">PERSONAL NOTES & IDEAS</p>
+  <h1>Thinking out loud.<br><span class="muted">Connecting the dots.</span></h1>
+  <p class="intro-copy">{{ site.description }}</p>
+</section>
+
+<section class="section-heading">
+  <h2>Latest writing</h2>
+  <span class="muted">{{ site.posts | size }} posts</span>
+</section>
+
+<div class="post-list">
+  {% for post in site.posts %}
+    <article class="post-card">
+      <div class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time>
+        {% if post.categories.size > 0 %}<span>·</span><span>{{ post.categories | first }}</span>{% endif %}
+      </div>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 180 }}</p>
+      <a class="read-link" href="{{ post.url | relative_url }}">Read article <span aria-hidden="true">↗</span></a>
+    </article>
+  {% endfor %}
+</div>

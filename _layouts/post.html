@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="article">
+  <header class="article-header">
+    <a class="back-link" href="{{ '/' | relative_url }}">← All writing</a>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %B %Y" }}</time>
+      {% if page.categories.size > 0 %}<span>·</span><span>{{ page.categories | join: ", " }}</span>{% endif %}
+      <span>·</span><span class="reading-time">Calculating reading time…</span>
+    </div>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="article-description">{{ page.description }}</p>{% endif %}
+  </header>
+  <div class="prose" id="article-content">
+    {{ content }}
+  </div>
+  <footer class="article-end">
+    <p>Written by {{ page.author | default: site.author.name }}</p>
+    <a href="{{ '/' | relative_url }}">← Back to all writing</a>
+  </footer>
+</article>
