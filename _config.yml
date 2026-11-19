@@ -1,11 +1,11 @@
 title: Nicogs
 description: "Thoughts, experiments and perspectives on creativity, technology and digital culture."
-url: "https://YOUR-USERNAME.github.io"
+url: "https://nicogs.github.io"
 baseurl: ""
 lang: en
 author:
-  name: Nicolas Grootjans
-  url: "https://YOUR-USERNAME.github.io"
+  name: Nicogs
+  url: "https://nicogs.github.io"
 
 markdown: kramdown
 permalink: /:categories/:title/
